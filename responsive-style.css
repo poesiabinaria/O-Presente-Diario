@@ -1,0 +1,16 @@
+@media screen and (min-width:1200px) {
+
+	body{ background-image: url("img/background-acima-1024px.jpg"); }
+
+}
+
+
+@media screen and (max-width:780px){
+
+	/*.conteudo{ width: 780px; }*/
+
+}
+
+
+/*min: acima de
+max: até*/
