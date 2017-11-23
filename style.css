@@ -129,15 +129,6 @@ input:focus { box-shadow: 0 1px 15px 0 rgba(0, 164, 211, .7); }
 
 
 
-
-
-
-
-
-
-
-
-
 /* #################### Conteúdo*/
 
 body{
@@ -150,6 +141,7 @@ body{
 
 }
 
+
 #coluna-imperativa{
 	height: 958px;
 	width: 240px;
@@ -159,7 +151,6 @@ body{
 	box-shadow: 0 0 30px rgba(0, 0, 0, .8);
 	float: left;
 	transition: all .2s ease-out;
-	
 }
 
 
@@ -187,16 +178,16 @@ body{
 	left: 11px;
 }
 
-	#dia-mes{
-		color: rgb(35, 44, 49);
-		font-size: 20px;
-		font-weight: bold;
-		margin-bottom: -2px;
-	}
 
-	
-	#ano{ font-size: 26px; }
+#dia-mes{
+	color: rgb(35, 44, 49);
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: -2px;
+}
 
+
+#ano{ font-size: 26px; }
 
 
 #titulo-slogan-relogio{ 
@@ -204,39 +195,41 @@ body{
 	height: 160px;
 }
 
-	h1{
-		font-size: 36px; 
-		font-family: 'Bad Script', cursive;
-		line-height: 50px; 
-		margin: 10px 20px;
-		word-spacing: 2px;
-	}
+
+h1{
+	font-size: 36px; 
+	font-family: 'Bad Script', cursive;
+	line-height: 50px; 
+	margin: 10px 20px;
+	word-spacing: 2px;
+}
 
 
-	#slogan{
-		font-size: 13px;
-		font-style: italic;
-		display: block;
-	}
+#slogan{
+	font-size: 13px;
+	font-style: italic;
+	display: block;
+}
 
 
-	#relogio{
-		font-weight: bold;
-		line-height: 50px;
-		display: inline-block;
-		margin-top: -4px;
-		
-		height: 0;
+#relogio{
+	font-weight: bold;
+	line-height: 50px;
+	display: inline-block;
+	margin-top: -4px;
+	height: 0;
+}
 
-	}
 
-		#hora-minuto{ font-size: 24px; }
+#hora-minuto{ font-size: 24px; }
 
-		#segundos{
-			font-size: 34px;
-			color: #00a4d3;
-			float: right;
-		}
+
+#segundos{
+	font-size: 34px;
+	color: #00a4d3;
+	float: right;
+}
+
 
 .barra-separadora{
 	border: 1px solid white;
@@ -252,23 +245,17 @@ body{
 	font-style: italic;
 	line-height: 24px;
 	text-align: left;
-	display: inline-block;
-	
+	display: inline-block;	
 }
+
 
 #botao-saiba-mais{ 
 	background-color: #00a4d3;
 	margin-left: 10px; 
 }
 
-#botao-saiba-mais:hover{
-	background-color: #32b6db;
-}
 
-
-
-
-
+#botao-saiba-mais:hover{ background-color: #32b6db; }
 
 
 
@@ -281,12 +268,15 @@ main{
 	background-color: rgba(255, 255, 255, 0);
 }
 
+
 #cabecalho{ height: 140px; border-top: 8px solid #DA1653;}
+
 
 #conteudo__cabecalho{
 	margin: 20px 20px 0 0;
 	float: right;
 }
+
 
 #conteudo__coluna-principal{ margin: 0 auto; }
 
@@ -302,12 +292,14 @@ main{
 	width: 380px;
 }
 
+
 #box-login{ 
 	margin-top: 40px; /*MELHORAR ISSO DEPOIS*/
 	border-left: 2px solid white; 
 	padding: 0 70px 0 70px;
 	margin-bottom: 130px;
 }
+
 
 #box-cadastro{ 
 	border-right: 2px solid white; 
@@ -317,7 +309,10 @@ main{
 
 
 #elementos-login input, 
+
+
 #elementos-cadastro input{ margin-bottom: 10px; }
+
 
 #botao-entrar, #botao-juntarse {margin-top: 24px; }
 
@@ -335,15 +330,13 @@ main{
 
 
 
-
-
-
 /* #################### PÁGINA MEU-MENU*/
 
 .meu-menu{ 
 	position: relative; 
 	width: 350px;
 }
+
 
 #box-meu-menu{
 	margin-top: 120px;
@@ -358,14 +351,18 @@ main{
 	margin-bottom: 25px;
 }
 
+
 #msg-principal{
 	font-size: 26px;
 	margin-bottom: 10px;
 }
 
+
 #msg-secundaria{ font-size: 20px; }
 
+
 #botoes-meu-menu { text-align: center; }
+
 
 #botao-escrever{ margin-right: 10px; }
 
@@ -377,6 +374,7 @@ main{
 	margin-top: 8px;	
 	margin-bottom: 0;
 }
+
 
 #sub-presente{
 	margin-left: 66px;
@@ -397,14 +395,13 @@ main{
 
 
 
-
-
-
 /* #################### PÁGINA ESCREVER PRESENTE*/
 
 body.paginas-escrever-recordar{ height: 1110px; }
 
+
 .paginas-escrever-recordar > #coluna-imperativa {height: 1100px;}
+
 
 .paginas-escrever-recordar{
 	background-image: url("img/background-acima-1024px.jpg");
@@ -422,6 +419,7 @@ body.paginas-escrever-recordar{ height: 1110px; }
 	padding-right: 15px;
 	position: relative;
 }
+
 
 #barra-rotacionada_escrever-presente{
 	border: 1px solid white;
@@ -459,18 +457,18 @@ body.paginas-escrever-recordar{ height: 1110px; }
 	text-transform: uppercase;
 	transition: .25s ease-out; 
 	display: unset;
-	
 }
+
 
 .titulo-folha input:focus { 
 	box-shadow: unset; 
 	border-bottom: 1px solid #32b6db; 
 }
 
+
 .corpo-folha textarea{
 	font: normal 400 15px 'Open Sans', sans-serif;
 	color: white;
-	
 	text-align: justify;
 	margin-top: 35px;
 	outline: none;
@@ -499,22 +497,16 @@ body.paginas-escrever-recordar{ height: 1110px; }
 }
 
 
+#numero-folha{ margin: 0 0 15px 146px; }
 
-#numero-folha{ 
-	margin: 0 0 15px 146px; 
-}
 
 #momento-esc-pag-pass{ margin-left: 30px;}
 
-#box-inferior{
 
+#box-inferior{
 	float: right;
 	margin: 30px 0 0 0;
 }
-
-
-
-
 
 
 
@@ -531,8 +523,8 @@ body.paginas-escrever-recordar{ height: 1110px; }
 #box-ver-folhas{
 	margin-top: 50px;
 	border-right: 2px solid white;
-	
 }
+
 
 #lista-folhas { margin-bottom: -20px; }
 
@@ -545,15 +537,17 @@ body.paginas-escrever-recordar{ height: 1110px; }
 	cursor: pointer;
 	margin-bottom: 20px;
 	/*background-color: rgba(255, 255, 255, 0.1);*/
-	
 }
+
 
 #resumo-folha:hover{
 	background-color: rgba(153,218,237, 0.3);
 	border-radius: 0 2px 2px 0;
 }
 
+
 .barra-vertical { border-left: 6px solid #00a4d3; }
+
 
 .titulo-folha {    /*REUSAR ISTO */
 	font: normal 700 16px 'Open Sans', sans-serif;
@@ -568,6 +562,7 @@ body.paginas-escrever-recordar{ height: 1110px; }
 	float: left;
 	margin-right: 10px;
 }
+
 
 .momento-escrita{
 	background-color: #00a4d3;
@@ -584,6 +579,7 @@ body.paginas-escrever-recordar{ height: 1110px; }
 	transform: rotate(130deg);
 }
 
+
 #botao-mais {
 	margin-top: 30px; 
 	padding: 3px 20px;
@@ -591,11 +587,8 @@ body.paginas-escrever-recordar{ height: 1110px; }
 	border: 1px solid white;
 }
 
+
 #botao-mais:hover{ background-color: #DA1653; }
-
-
-
-
 
 
 
