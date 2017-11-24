@@ -400,7 +400,7 @@ main{
 body.paginas-escrever-recordar{ height: 1110px; }
 
 
-.paginas-escrever-recordar > #coluna-imperativa {height: 1100px;}
+.paginas-escrever-recordar #coluna-imperativa {height: 1100px;}
 
 
 .paginas-escrever-recordar{
