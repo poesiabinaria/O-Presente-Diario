@@ -410,7 +410,7 @@ body.paginas-escrever-recordar{ height: 1110px; }
 }
 
 
-.escrever-presente {
+.escrever-presente, .recordar-passado {
 	margin: 0 auto;
 	width: 580px;
 	border-left: 2px solid white;	
@@ -437,55 +437,39 @@ body.paginas-escrever-recordar{ height: 1110px; }
 		rgba(32,124,229,0.2) 100%);
 	border-radius: 6px;
 	width: 580;
-	text-align: center;
-	padding: 30px 0 30px 0;
+	padding: 50px 0 30px 0;
 	margin-top: 90px;
 }
 
 
-.titulo-folha input{
-	font: italic 700 18px 'Open Sans', sans-serif;
+
+.titulo-folha, .titulo-folha p, .titulo-folha input{
+	font: italic 700 20px 'Open Sans', sans-serif;
+	text-transform: uppercase;
 	color: white;
+	text-align: center;
+	margin: 0;
+}
+
+
+.titulo-folha input{
 	width: 350px;
+	text-align: center;
 	background-color: unset;
 	padding-bottom: 4px;
 	border: none;
 	border-radius: unset;
 	border-bottom: 1px solid white;
-	text-align: center;
-	outline: none;
 	text-transform: uppercase;
 	transition: .25s ease-out; 
 	display: unset;
+	outline: none;
 }
 
 
 .titulo-folha input:focus { 
 	box-shadow: unset; 
 	border-bottom: 1px solid #32b6db; 
-}
-
-
-.corpo-folha textarea{
-	font: normal 400 15px 'Open Sans', sans-serif;
-	color: white;
-	text-align: justify;
-	margin-top: 35px;
-	outline: none;
-	scroll-behavior: smooth;
-	background-color: inherit;
-	resize: none;
-	border: 0px solid #00a4d3;
-	border-radius: 6px;
-	width: 500px;
-	height: 500px;
-}
-
-
-#titulo-folha-passado p{
-	text-align: center;
-	margin: 0;
-	padding: 6px 0;
 }
 
 
@@ -497,16 +481,49 @@ body.paginas-escrever-recordar{ height: 1110px; }
 }
 
 
-#numero-folha{ margin: 0 0 15px 146px; }
+.corpo-folha{ margin: 0 45px; }
 
 
-#momento-esc-pag-pass{ margin-left: 30px;}
+.corpo-folha textarea, .corpo-folha p{
+	font: normal 400 15px 'Open Sans', sans-serif;
+	color: white;	
+	text-align: justify;
+	/*text-indent: 50px;*/
+	margin-top: 35px;
+	width: 482px;
+	height: 500px;
+}
+
+.corpo-folha p::first-letter{
+	
+	font-size: 34px;
+	line-height: 35px;
+	color: #00a4d3;	
+}
+
+
+.corpo-folha textarea{
+	outline: none;
+	scroll-behavior: smooth;
+	background-color: inherit;
+	resize: none;
+	border: 0px solid #00a4d3;
+}
 
 
 #box-inferior{
 	float: right;
 	margin: 30px 0 0 0;
 }
+
+
+#numero-folha{ margin: 0 0 15px 146px; }
+
+
+
+
+
+
 
 
 
@@ -521,7 +538,7 @@ body.paginas-escrever-recordar{ height: 1110px; }
 }
 
 #box-ver-folhas{
-	margin-top: 50px;
+	margin-top: 60px;
 	border-right: 2px solid white;
 }
 
@@ -549,14 +566,14 @@ body.paginas-escrever-recordar{ height: 1110px; }
 .barra-vertical { border-left: 6px solid #00a4d3; }
 
 
-.titulo-folha {    /*REUSAR ISTO */
-	font: normal 700 16px 'Open Sans', sans-serif;
+#resumo-folha .titulo-folha {   
+	font-size: 16px;
+	font-style: normal; 
+	text-align: left;
 	margin-bottom: 9px;
-	text-transform: uppercase;
 	margin-top: 0px;
 	padding-top: 7px;
 }
-
 
 #box-ver-folhas .numero-folha {
 	float: left;
@@ -575,14 +592,14 @@ body.paginas-escrever-recordar{ height: 1110px; }
 	width: 140px;
 	position: absolute;
 	left: 313px;
-	top: 407px;
+	top: 417px;
 	transform: rotate(130deg);
 }
 
 
 #botao-mais {
-	margin-top: 30px; 
-	padding: 3px 20px;
+	margin-top: 40px; 
+	padding: 3px 12px;
 	background-color: unset;
 	border: 1px solid white;
 }
