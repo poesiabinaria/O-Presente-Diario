@@ -60,7 +60,7 @@ input{
 	width: 210px;
 	border-radius: 6px;
 	border: 2px solid #00a4d3; 
-	transition: .08s linear; 
+	transition: .1s linear; 
 	outline: none;
 	display: block;
 	/*box-shadow: 0 0px 0 black;*/
@@ -165,7 +165,7 @@ body{
 
 
 #marcador-diario img{ 
-	width: 70px;
+	width: 65px;
 	height: 98px;	
 	border-radius: 6px 6px 0 0;
 }
@@ -175,7 +175,7 @@ body{
 	font-weight: bold;
 	position: absolute;
 	top: 18px;
-	left: 11px;
+	left: 9px;
 }
 
 
@@ -243,7 +243,7 @@ h1{
 	font-family: 'Cabin', sans-serif;
 	font-weight: 400;
 	font-style: italic;
-	line-height: 24px;
+	line-height: 23px;
 	text-align: left;
 	display: inline-block;	
 }
@@ -433,8 +433,13 @@ body.paginas-escrever-recordar{ height: 1110px; }
 
 .folha{
 	background: linear-gradient(135deg, rgba(0,165,211,0.1) 0%, 
-		rgba(0,165,211,0.4) 45%, 
+		rgba(0,165,211,0.45) 45%, 
 		rgba(32,124,229,0.2) 100%);
+		/*background: linear-gradient(135deg, rgba(0,165,211,0.1) 0%, 
+		rgba(0,165,211,0.3) 12%, 
+		rgba(0,191,183,0.4) 50%, 
+		rgba(0,207,166,0.3) 74%, 
+		rgba(32,124,229,0.3) 100%);*/
 	border-radius: 6px;
 	width: 580;
 	padding: 50px 0 30px 0;
@@ -444,11 +449,12 @@ body.paginas-escrever-recordar{ height: 1110px; }
 
 
 .titulo-folha, .titulo-folha p, .titulo-folha input{
-	font: italic 700 20px 'Open Sans', sans-serif;
+	font: italic 700 21px 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	color: white;
 	text-align: center;
 	margin: 0;
+	/*text-shadow: 0 0 50px rgba(255, 255, 255, .4);*/
 }
 
 
@@ -469,7 +475,7 @@ body.paginas-escrever-recordar{ height: 1110px; }
 
 .titulo-folha input:focus { 
 	box-shadow: unset; 
-	border-bottom: 1px solid #32b6db; 
+	border-bottom: 1px solid #00a4d3; 
 }
 
 
@@ -495,8 +501,8 @@ body.paginas-escrever-recordar{ height: 1110px; }
 }
 
 .corpo-folha p::first-letter{
-	
 	font-size: 34px;
+	font-style: italic;
 	line-height: 35px;
 	color: #00a4d3;	
 }

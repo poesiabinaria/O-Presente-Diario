@@ -7,31 +7,15 @@ function mostrarRelogio() {
 
 	document.getElementById('hora-minuto').innerHTML = horaMinuto + ':';
 	document.getElementById('segundos').innerHTML = segundos;
-	// document.getElementById('segundos').style.transition = "all 2s";
 }
 
 
 function mostrarData(){
 	
-	const meses = {
-		0: '01',
-		1: '02',
-		2: '03',
-		3: '04',
-		4: '05',
-		5: '06',
-		6: '07',
-		7: '08',
-		8: '09',
-		9: '10',
-		10: '11',
-		11: '12'
-	}
-	
 	var presente = new Date;
 
 	var mes = presente.getMonth();
-	var mesPresente = meses[mes];
+	var mesPresente = (mes + 1);
 
 	var dia = presente.toString().substr(8, 2);
 	var ano = presente.toString().substr(13, 2);
@@ -56,6 +40,7 @@ function diaOuNoite(){
 	}
 }
 
+mostrarRelogio();
 setInterval(mostrarRelogio, 1000);
 mostrarData();
 diaOuNoite();
