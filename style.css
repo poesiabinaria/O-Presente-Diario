@@ -165,17 +165,19 @@ body{
 
 
 #marcador-diario img{ 
-	width: 65px;
-	height: 98px;	
-	border-radius: 6px 6px 0 0;
+	width: 70px;
+	height: 110px;	
+	border-radius: 8px 8px 0 0;
+	/*-webkit-filter: drop-shadow(0px 0px 40px rgba(0, 164, 211, .3));
+  	filter: drop-shadow(0px 0px 40px rgba(0, 164, 211, .3));*/
 }
 
 
 #box-data{
 	font-weight: bold;
 	position: absolute;
-	top: 18px;
-	left: 9px;
+	top: 24px;
+	left: 11px;
 }
 
 
@@ -187,7 +189,7 @@ body{
 }
 
 
-#ano{ font-size: 26px; }
+#ano{ font-size: 28px; }
 
 
 #titulo-slogan-relogio{ 
@@ -432,14 +434,13 @@ body.paginas-escrever-recordar{ height: 1110px; }
 
 
 .folha{
-	background: linear-gradient(135deg, rgba(0,165,211,0.1) 0%, 
+	/*background: linear-gradient(135deg, rgba(0,165,211,0.1) 0%, 
 		rgba(0,165,211,0.45) 45%, 
-		rgba(32,124,229,0.2) 100%);
-		/*background: linear-gradient(135deg, rgba(0,165,211,0.1) 0%, 
-		rgba(0,165,211,0.3) 12%, 
-		rgba(0,191,183,0.4) 50%, 
+		rgba(32,124,229,0.2) 100%);*/
+		background: linear-gradient(135deg, rgba(0,165,211,0.1) 0%, 
+		rgba(0,191,183,0.3) 50%, 
 		rgba(0,207,166,0.3) 74%, 
-		rgba(32,124,229,0.3) 100%);*/
+		rgba(32,124,229,0.3) 100%);
 	border-radius: 6px;
 	width: 580;
 	padding: 50px 0 30px 0;
@@ -459,10 +460,10 @@ body.paginas-escrever-recordar{ height: 1110px; }
 
 
 .titulo-folha input{
-	width: 350px;
+	width: 400px;
 	text-align: center;
 	background-color: unset;
-	padding-bottom: 4px;
+	padding-bottom: 2px;
 	border: none;
 	border-radius: unset;
 	border-bottom: 1px solid white;
@@ -474,6 +475,7 @@ body.paginas-escrever-recordar{ height: 1110px; }
 
 
 .titulo-folha input:focus { 
+	/*width: 450px;*/
 	box-shadow: unset; 
 	border-bottom: 1px solid #00a4d3; 
 }
