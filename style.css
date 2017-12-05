@@ -66,7 +66,7 @@ input{
 	/*box-shadow: 0 0px 0 black;*/
 }
 
-input:focus { box-shadow: 0 1px 15px 0 rgba(0, 164, 211, .7); }
+input:focus { box-shadow: 0 1px 15px 0 rgba(0, 164, 211, .5); }
 
 .faixa-texto{
 	font-size: 12px;
@@ -87,7 +87,7 @@ input:focus { box-shadow: 0 1px 15px 0 rgba(0, 164, 211, .7); }
 	height: auto;
 	border-radius: 4px;	
 	padding: 6px 0 6px 0;
-	
+	box-shadow: 0 0 30px black;
 }
 
 #conteudo__box-superior{
@@ -116,13 +116,12 @@ input:focus { box-shadow: 0 1px 15px 0 rgba(0, 164, 211, .7); }
 	font-weight: bold;
 	border: 2px solid #FFFFFF;
 	border-radius: 2px;
-	display: inline-flex;
+	display: inline-block;
 	padding: 1px 14px;
 	margin-bottom: 30px;
 	box-shadow: 0 0 50px rgba(255, 255, 255, .3);
 	line-height: 4px;
 	text-transform: uppercase;
-	
 }
 
 
@@ -134,7 +133,7 @@ input:focus { box-shadow: 0 1px 15px 0 rgba(0, 164, 211, .7); }
 body{
 	background-image: url("img/background-abaixo-1024px.jpg");
 	background-size: cover;
-	height: 1000px;
+	height: 1100px;
 	margin: 0;
 	font-family: 'Arial', sans-serif;
 	color: white;
@@ -143,14 +142,15 @@ body{
 
 
 #coluna-imperativa{
-	height: 958px;
+	height: 1092px;
 	width: 240px;
-	background-color: rgba(35, 44, 49, 0.5);
+	background-color: rgba(35, 44, 49, .4);
 	border-top: 8px solid #00a4d3;
 	text-align: center;
 	box-shadow: 0 0 30px rgba(0, 0, 0, .8);
 	float: left;
-	transition: all .2s ease-out;
+	
+	
 }
 
 
@@ -266,6 +266,7 @@ h1{
 /*Coluna Principal*/
 
 main{
+	height: 94.6%;
 	margin-left: 240px; 
 	background-color: rgba(255, 255, 255, 0);
 }
@@ -399,11 +400,33 @@ main{
 
 /* #################### PÁGINA ESCREVER PRESENTE*/
 
-body.paginas-escrever-recordar{ height: 1110px; }
+body.paginas-escrever-recordar{ height: 1300px; }
+
+#youtube-icon img{ 
+	width: 42px;
+	margin-top: 10px;
+	transition: .2s linear;
+}
+
+#youtube-icon img:hover{ opacity: .8; }
+
+.paginas-escrever-recordar #box-poesia {text-align: center; width: 200px;}
+
+.paginas-escrever-recordar main{ height: 95.4%; }
+
+.paginas-escrever-recordar #coluna-imperativa {
+	height: 1292px;
+	/*transition: all .3s ease-out;
+	opacity: 0.4;*/
+	
+}
 
 
-.paginas-escrever-recordar #coluna-imperativa {height: 1100px;}
-
+/*.paginas-escrever-recordar #coluna-imperativa:hover{
+	opacity: 1;
+	
+}
+*/
 
 .paginas-escrever-recordar{
 	background-image: url("img/background-acima-1024px.jpg");
@@ -434,13 +457,13 @@ body.paginas-escrever-recordar{ height: 1110px; }
 
 
 .folha{
-	/*background: linear-gradient(135deg, rgba(0,165,211,0.1) 0%, 
+	background: linear-gradient(135deg, rgba(0,165,211,0.1) 0%, 
 		rgba(0,165,211,0.45) 45%, 
-		rgba(32,124,229,0.2) 100%);*/
-		background: linear-gradient(135deg, rgba(0,165,211,0.1) 0%, 
+		rgba(32,124,229,0.2) 100%);
+		/*background: linear-gradient(135deg, rgba(0,165,211,0.1) 0%, 
 		rgba(0,191,183,0.3) 50%, 
 		rgba(0,207,166,0.3) 74%, 
-		rgba(32,124,229,0.3) 100%);
+		rgba(32,124,229,0.3) 100%);*/
 	border-radius: 6px;
 	width: 580;
 	padding: 50px 0 30px 0;
@@ -503,8 +526,9 @@ body.paginas-escrever-recordar{ height: 1110px; }
 }
 
 .corpo-folha p::first-letter{
+	font-family: 'Bad Script', cursive;
 	font-size: 34px;
-	font-style: italic;
+	font-weight: bold;
 	line-height: 35px;
 	color: #00a4d3;	
 }
@@ -625,7 +649,9 @@ body.paginas-escrever-recordar{ height: 1110px; }
 footer{ 
 	background-color: #00a4d3;
 	padding: 6px;
-	clear: both;
+	
+	margin-left: 240px;
+	
 }
 
 footer p{
