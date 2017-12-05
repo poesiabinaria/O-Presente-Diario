@@ -240,7 +240,7 @@ h1{
 }
 
 
-#box-poesia {
+#box-texto {
 	font-size: 18px;
 	font-family: 'Cabin', sans-serif;
 	font-weight: 400;
@@ -398,41 +398,15 @@ main{
 
 
 
-/* #################### PÁGINA ESCREVER PRESENTE*/
+/* #################### CONJUNTO PÁGINAS ESCREVER E RECORDAR*/
 
-body.paginas-escrever-recordar{ height: 1300px; }
+.paginas-escrever-recordar{ height: 1300px; }
 
-#youtube-icon img{ 
-	width: 42px;
-	margin-top: 10px;
-	transition: .2s linear;
-}
-
-#youtube-icon img:hover{ opacity: .8; }
-
-.paginas-escrever-recordar #box-poesia {text-align: center; width: 200px;}
 
 .paginas-escrever-recordar main{ height: 95.4%; }
 
-.paginas-escrever-recordar #coluna-imperativa {
-	height: 1292px;
-	/*transition: all .3s ease-out;
-	opacity: 0.4;*/
-	
-}
 
-
-/*.paginas-escrever-recordar #coluna-imperativa:hover{
-	opacity: 1;
-	
-}
-*/
-
-.paginas-escrever-recordar{
-	background-image: url("img/background-acima-1024px.jpg");
-	background-size: cover;
-	background-position: center;
-}
+.paginas-escrever-recordar #coluna-imperativa { height: 1292px; }
 
 
 .escrever-presente, .recordar-passado {
@@ -444,6 +418,38 @@ body.paginas-escrever-recordar{ height: 1300px; }
 	padding-right: 15px;
 	position: relative;
 }
+
+
+.paginas-escrever-recordar{
+	background-image: url("img/background-acima-1024px.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+
+.paginas-escrever-recordar #box-texto {
+	text-align: center; 
+	width: 200px;
+}
+
+
+#youtube-icon img{ 
+	width: 42px;
+	margin-top: 10px;
+	transition: .2s linear;
+}
+
+
+#youtube-icon img:hover{ opacity: .8; }
+
+
+
+
+
+
+
+
+/* #################### PÁGINA ESCREVER PRESENTE*/
 
 
 #barra-rotacionada_escrever-presente{
@@ -519,6 +525,7 @@ body.paginas-escrever-recordar{ height: 1300px; }
 	font: normal 400 15px 'Open Sans', sans-serif;
 	color: white;	
 	text-align: justify;
+	line-height: 22px;
 	/*text-indent: 50px;*/
 	margin-top: 35px;
 	width: 482px;
