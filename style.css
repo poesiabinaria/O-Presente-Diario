@@ -6,11 +6,11 @@ a:link { text-decoration: none; }
 
 button {
 	font-family: 'Arial', sans-serif;
-	font-size: 13px;
+	font-size: 12px;
 	background-color: #00a4d3;
 	color: white;
 	font-weight: bold;
-	padding: 8px 18px;
+	padding: 8px 14px;
 	border-radius: 4px;
 	border: none;
 	transition: .15s linear;
@@ -24,7 +24,7 @@ button:hover{ background-color: #32b6db; }
 	background-color: #DA1653;
 	color: white;
 	font-size: 11px;
-	padding: 3px 8px;
+	padding: 3px 6px;
 	box-shadow: none;
 }
 
@@ -37,16 +37,16 @@ button:hover{ background-color: #32b6db; }
 
 #botao-fechar {
 	font-size: 9px;
-	margin: 10px 0 5px 15px;
+	margin: 10px 0 5px 0;
 }
 
 
 #botao-voltar{ 
 	background-color: white;
 	color: black;
-	font-size: 10px;
-	padding: 3px 8px;
-	margin: 0 0 4px 20px;
+	font-size: 9px;
+	padding: 4px 8px;
+	margin-bottom: 4px;
  }
 
  #botao-voltar:hover{
@@ -55,7 +55,7 @@ button:hover{ background-color: #32b6db; }
  }
 
 input{
-	padding: 7px 12px;
+	padding: 6px 11px;
 	color: black;
 	width: 210px;
 	border-radius: 6px;
@@ -83,36 +83,38 @@ input:focus { box-shadow: 0 1px 15px 0 rgba(0, 164, 211, .5); }
 
 .box-superior{
 	background-color: #00a4d3;
-	width: 84px;
+	width: 76px;
 	height: auto;
 	border-radius: 4px;	
-	padding: 6px 0 6px 0;
+	padding: 6px 0;
 	box-shadow: 0 0 30px black;
 }
 
-#conteudo__box-superior{
+#texto-box-superior{
 	text-align: center;
 	border: 2px dashed white;
 	border-radius: 4px;
-	padding: 10px 4px;
+	padding: 8px 0;
 	width: 58px;
 	margin: 0 auto;
 }
 
-#conteudo__box-superior img{ 
+#texto-box-superior img{ 
 	width: 30px; 
 	margin-bottom: 4px; 
 }
 
-#conteudo__box-superior p{ 
-	font: italic 600 13px 'Cabin', sans-serif;
+#texto-box-superior p{ 
+	font: italic 600 12.4px 'Cabin', sans-serif;
 	text-transform: uppercase;
 	margin: 0;
 }
 
+#botoes-box-superior{ text-align: center; }
+
 
 .titulo-boxes{
-	font-size: 12px;
+	font-size: 11px;
 	font-weight: bold;
 	border: 2px solid #FFFFFF;
 	border-radius: 2px;
@@ -143,7 +145,7 @@ body{
 
 #coluna-imperativa{
 	height: 1092px;
-	width: 240px;
+	width: 215px;
 	background-color: rgba(35, 44, 49, .4);
 	border-top: 8px solid #00a4d3;
 	text-align: center;
@@ -165,8 +167,8 @@ body{
 
 
 #marcador-diario img{ 
-	width: 70px;
-	height: 110px;	
+	width: 62px;
+	height: 96px;	
 	border-radius: 8px 8px 0 0;
 	/*-webkit-filter: drop-shadow(0px 0px 40px rgba(0, 164, 211, .3));
   	filter: drop-shadow(0px 0px 40px rgba(0, 164, 211, .3));*/
@@ -176,20 +178,20 @@ body{
 #box-data{
 	font-weight: bold;
 	position: absolute;
-	top: 24px;
-	left: 11px;
+	top: 20px;
+	left: 9px;
 }
 
 
 #dia-mes{
 	color: rgb(35, 44, 49);
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: bold;
 	margin-bottom: -2px;
 }
 
 
-#ano{ font-size: 28px; }
+#ano{ font-size: 25px; }
 
 
 #titulo-slogan-relogio{ 
@@ -199,7 +201,7 @@ body{
 
 
 h1{
-	font-size: 36px; 
+	font-size: 32px; 
 	font-family: 'Bad Script', cursive;
 	line-height: 50px; 
 	margin: 10px 20px;
@@ -208,7 +210,7 @@ h1{
 
 
 #slogan{
-	font-size: 13px;
+	font-size: 11.5px;
 	font-style: italic;
 	display: block;
 }
@@ -223,11 +225,11 @@ h1{
 }
 
 
-#hora-minuto{ font-size: 24px; }
+#hora-minuto{ font-size: 20px; }
 
 
 #segundos{
-	font-size: 34px;
+	font-size: 30px;
 	color: #00a4d3;
 	float: right;
 }
@@ -235,13 +237,13 @@ h1{
 
 .barra-separadora{
 	border: 1px solid white;
-	width: 25px;
+	width: 22px;
 	margin: 65px auto;
 }
 
 
 #box-texto {
-	font-size: 18px;
+	font-size: 16px;
 	font-family: 'Cabin', sans-serif;
 	font-weight: 400;
 	font-style: italic;
@@ -267,7 +269,7 @@ h1{
 
 main{
 	height: 94.6%;
-	margin-left: 240px; 
+	margin-left: 215px; 
 	background-color: rgba(255, 255, 255, 0);
 }
 
@@ -325,7 +327,7 @@ main{
 	width: 398px;
 	position: absolute;
 	left: -10px;
-	bottom: 345px;
+	bottom: 334px;
 	transform: rotate(19deg);
 }
 
@@ -411,7 +413,7 @@ main{
 
 .escrever-presente, .recordar-passado {
 	margin: 0 auto;
-	width: 580px;
+	width: 560px;
 	border-left: 2px solid white;	
 	border-right: 2px solid white;
 	padding-left: 15px;
@@ -429,12 +431,14 @@ main{
 
 .paginas-escrever-recordar #box-texto {
 	text-align: center; 
-	width: 200px;
+	width: 170px;
 }
+
+.corpo-folha p {display: inline-block;}
 
 
 #youtube-icon img{ 
-	width: 42px;
+	width: 40px;
 	margin-top: 10px;
 	transition: .2s linear;
 }
@@ -471,7 +475,7 @@ main{
 		rgba(0,207,166,0.3) 74%, 
 		rgba(32,124,229,0.3) 100%);*/
 	border-radius: 6px;
-	width: 580;
+	width: 560px;
 	padding: 50px 0 30px 0;
 	margin-top: 90px;
 }
@@ -479,7 +483,7 @@ main{
 
 
 .titulo-folha, .titulo-folha p, .titulo-folha input{
-	font: italic 700 21px 'Open Sans', sans-serif;
+	font: italic 700 19px 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	color: white;
 	text-align: center;
@@ -489,7 +493,7 @@ main{
 
 
 .titulo-folha input{
-	width: 400px;
+	width: 380px;
 	text-align: center;
 	background-color: unset;
 	padding-bottom: 2px;
@@ -506,7 +510,8 @@ main{
 .titulo-folha input:focus { 
 	/*width: 450px;*/
 	box-shadow: unset; 
-	border-bottom: 1px solid #00a4d3; 
+	border-bottom: 1px solid #00a4d3;
+	width: 420px; 
 }
 
 
@@ -518,17 +523,17 @@ main{
 }
 
 
-.corpo-folha{ margin: 0 45px; }
+.corpo-folha{ text-align: center; }
 
 
 .corpo-folha textarea, .corpo-folha p{
-	font: normal 400 15px 'Open Sans', sans-serif;
+	font: normal 400 14px 'Open Sans', sans-serif;
 	color: white;	
 	text-align: justify;
 	line-height: 22px;
 	/*text-indent: 50px;*/
 	margin-top: 35px;
-	width: 482px;
+	width: 442px;
 	height: 500px;
 }
 
@@ -657,12 +662,12 @@ footer{
 	background-color: #00a4d3;
 	padding: 6px;
 	
-	margin-left: 240px;
+	margin-left: 215px;
 	
 }
 
 footer p{
-	font-size: 13px;
+	font-size: 12.5px;
 	font-weight: bold;
 	text-align: center;
 	margin: 6px auto;
