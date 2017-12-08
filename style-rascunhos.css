@@ -1,5 +1,6 @@
 body{
-	background-color: black	;
+	background-image: url("img/background-abaixo-1024px.jpg");
+	background-size:cover;
 	color: white;
 	margin: 0;
 }
@@ -77,19 +78,23 @@ button:hover{ background-color: #32b6db; }
 
 
 .escrever-presente {
-	margin: 0 auto;
+	margin: 20px auto;
 	width: 580px;
-	border-left: 2px solid white;	
+	border: 8px solid white;
+	border-image: white;
+	border-image-slice: 1;
+	/*border-left: 2px solid white;	
 	border-right: 2px solid white;
 	padding-left: 15px;
-	padding-right: 15px;
+	padding-right: 15px;*/
 }
 
 
 .folha{
-	background: linear-gradient(135deg, rgba(0,165,211,0.3) 0%, 
+	/*background: linear-gradient(135deg, rgba(0,165,211,0.3) 0%, 
 		rgba(0,165,211,0.4) 45%, 
-		rgba(32,124,229,0.3) 100%);
+		rgba(32,124,229,0.3) 100%);*/
+	background-color: rgba(35, 44, 49, .3);
 	border-radius: 6px;
 	width: 580;
 	text-align: center;

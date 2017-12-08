@@ -94,7 +94,7 @@ input:focus { box-shadow: 0 1px 15px 0 rgba(0, 164, 211, .5); }
 	text-align: center;
 	border: 2px dashed white;
 	border-radius: 4px;
-	padding: 8px 0;
+	padding: 8px 2px;
 	width: 58px;
 	margin: 0 auto;
 }
@@ -134,7 +134,7 @@ input:focus { box-shadow: 0 1px 15px 0 rgba(0, 164, 211, .5); }
 
 body{
 	background-image: url("img/background-abaixo-1024px.jpg");
-	background-size: cover;
+	background-size:cover;
 	height: 1100px;
 	margin: 0;
 	font-family: 'Arial', sans-serif;
@@ -414,10 +414,11 @@ main{
 .escrever-presente, .recordar-passado {
 	margin: 0 auto;
 	width: 560px;
-	border-left: 2px solid white;	
+
+	/*border-left: 2px solid white;	
 	border-right: 2px solid white;
 	padding-left: 15px;
-	padding-right: 15px;
+	padding-right: 15px;*/
 	position: relative;
 }
 
@@ -456,34 +457,33 @@ main{
 /* #################### PÁGINA ESCREVER PRESENTE*/
 
 
-#barra-rotacionada_escrever-presente{
+/*#barra-rotacionada_escrever-presente{
 	border: 1px solid white;
 	width: 150px;
 	position: absolute;
 	left: -40px;
 	top: 20px;
 	transform: rotate(150deg);
-}
+}*/
 
 
 .folha{
-	background: linear-gradient(135deg, rgba(0,165,211,0.1) 0%, 
-		rgba(0,165,211,0.45) 45%, 
-		rgba(32,124,229,0.2) 100%);
-		/*background: linear-gradient(135deg, rgba(0,165,211,0.1) 0%, 
-		rgba(0,191,183,0.3) 50%, 
-		rgba(0,207,166,0.3) 74%, 
-		rgba(32,124,229,0.3) 100%);*/
-	border-radius: 6px;
+	background: linear-gradient(135deg, rgba(35, 44, 49, .7) 0%, 
+		rgba(35, 44, 49, .7) 45%, 
+		rgba(35, 44, 49, .1) 100%);
+	border: 6px solid rgba(0, 164, 211,.5);
+	border-radius: 1px;
 	width: 560px;
 	padding: 50px 0 30px 0;
 	margin-top: 90px;
+	/*box-shadow: 20px -20px 100px rgba(0, 164, 211, .3);*/
 }
 
 
 
 .titulo-folha, .titulo-folha p, .titulo-folha input{
-	font: italic 700 19px 'Open Sans', sans-serif;
+	font: normal bold 20px 'Bad Script', cursive;
+	letter-spacing: 5px;
 	text-transform: uppercase;
 	color: white;
 	text-align: center;
@@ -493,15 +493,16 @@ main{
 
 
 .titulo-folha input{
-	width: 380px;
+	width: 320px;
 	text-align: center;
 	background-color: unset;
 	padding-bottom: 2px;
 	border: none;
 	border-radius: unset;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid transparent;
+	margin-bottom: -10px;
 	text-transform: uppercase;
-	transition: .25s ease-out; 
+	transition: .2s ease-out; 
 	display: unset;
 	outline: none;
 }
@@ -511,15 +512,14 @@ main{
 	/*width: 450px;*/
 	box-shadow: unset; 
 	border-bottom: 1px solid #00a4d3;
-	width: 420px; 
+	width: 370px; 
 }
 
 
 .titulo-folha input::placeholder { 
 	color: white; 
-	font-style: italic;
 	text-align: center; 
-	opacity: 0.6;
+	opacity: 0.5;
 }
 
 
