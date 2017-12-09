@@ -40,6 +40,8 @@ function diaOuNoite(){
 	}
 }
 
+
+
 mostrarRelogio();
 setInterval(mostrarRelogio, 1000);
 mostrarData();
