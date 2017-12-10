@@ -1,10 +1,13 @@
+var colunaImperativa = document.getElementById('coluna-imperativa');
+var colunaPrincipal = document.getElementsByTagName('main')[0];
+var cabecalho = document.getElementById('cabecalho');
+var footer = document.getElementsByTagName('footer')[0];
+var iconeSeta = document.getElementById('icone-seta');
+
+
+
+
 function focarFolha(){
-	
-	var colunaImperativa = document.getElementById('coluna-imperativa');
-	var colunaPrincipal = document.getElementsByTagName('main')[0];
-	var cabecalho = document.getElementById('cabecalho');
-	var footer = document.getElementsByTagName('footer')[0];
-	var iconeSeta = document.getElementById('icone-seta');
 	
 	cabecalho.style.height = "100px";
 	colunaImperativa.className = "coluna-imperativa-escondida";
@@ -17,12 +20,6 @@ function focarFolha(){
 
 function retornarPadraoPagina(){
 	
-	var colunaImperativa = document.getElementById('coluna-imperativa');
-	var colunaPrincipal = document.getElementsByTagName('main')[0];
-	var cabecalho = document.getElementById('cabecalho');
-	var footer = document.getElementsByTagName('footer')[0];
-	var iconeSeta = document.getElementById('icone-seta');
-	
 	cabecalho.style.height = "140px";
 	colunaImperativa.className = '';
 	colunaPrincipal.className = '';
@@ -32,9 +29,7 @@ function retornarPadraoPagina(){
 
 
 
-function verificarEstado(){
-	
-	var colunaImperativa = document.getElementById('coluna-imperativa');
+function verificarEstadoPagina(){
 
 	if (colunaImperativa.className == ""){ 
 		focarFolha(); 
@@ -46,5 +41,4 @@ function verificarEstado(){
 
 
 
-var setaEsconderMostrar = document.getElementById('seta-esconder-mostrar');
-setaEsconderMostrar.addEventListener("click", verificarEstado);
+iconeSeta.addEventListener("click", verificarEstadoPagina);
