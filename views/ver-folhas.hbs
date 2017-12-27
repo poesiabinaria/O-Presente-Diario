@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+	
+	{{> head}}
+
+	<body>
+		
+		<section id="coluna-imperativa">
+			<div id="coluna-imperativa__conteudo">
+				
+				{{> conteudopadraocolimperativa}}
+				{{> boxtextopoesia}}
+
+			</div>
+		</section>
+
+
+
+		<!-- Coluna Principal -->
+
+		<main>
+
+			<section id="cabecalho">
+				<div id="conteudo__cabecalho">
+					<div class="box-superior">
+						<div id="texto-box-superior">
+							<p>Diário<br>de<br>{{nomeUsuario}}</p>
+						</div>
+						<div id="botoes-box-superior">
+							<button id="botao-fechar" class="botao-pequeno">Fechá-lo</button>
+							<button id="botao-voltar" class="botao-pequeno">Voltar</button>
+						</div>
+					</div>  
+				</div>
+			</section>
+
+			<section id="coluna-principal" class="ver-folhas">
+				<div id="conteudo__coluna-principal">
+					<div class="mensagens-interativas">
+						<p id="msg-principal" class="faixa-texto"> Há {{listaFolhas.length}} folha(s) em seu diário, Gabriel </p>
+						<p id="msg-secundaria" class="faixa-texto"> Escolha uma para relembrar: </p>
+					</div>
+
+					<div id="box-ver-folhas" class="box-central">
+						<div id="lista-folhas">
+							{{#mostrarFolhas listaFolhas}}
+								<div class="barra-vertical">
+									<div id="resumo-folha">
+										<p class="titulo-folha"> {{tituloFolha}} </p>
+										<div class="informacoes-folha">
+											<span class="numero-folha faixa-texto"> {{numeroFolha}} </span>
+											<span class="momento-escrita faixa-texto"> {{dataEscrita}} </span>
+										</div>
+									</div>
+								</div>
+							{{/mostrarFolhas}}
+						</div>
+					</div>
+					<button id="botao-mais" class="botao-pequeno">Mais Antigas</button>
+					<div id="barra-rotacionada_ver-folha"></div>
+				</div>
+			</section>
+		</main>
+		
+	
+	
+
+		{{> footer}}
+	
+		
+		
+		
+
+		<script type="text/javascript" src="javascripts/funcoes-momento-presente.js"></script>
+	</body>
+</html>
+
+
+
+			

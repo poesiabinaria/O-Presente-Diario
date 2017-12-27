@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+	
+	{{> head}}
+
+	<body class="paginas-escrever-recordar">
+		<section id="coluna-imperativa">
+			<div id="seta-esconder-mostrar">
+				<img id="icone-seta" src="img/seta-esquerda.png">
+			</div>
+			<div id="coluna-imperativa__conteudo">
+
+				{{> conteudopadraocolimperativa}}
+				{{> boxtextoplaylist}}
+
+			</div>
+		</section>
+
+
+
+		<!-- Coluna Principal -->
+
+		<main>
+
+			<section id="cabecalho">
+				<div id="conteudo__cabecalho">
+					<div class="box-superior">
+						<div id="texto-box-superior">
+							<p>Diário<br>de<br>Gabriel</p>
+						</div>
+						<div id="botoes-box-superior">
+							<a href="/#"><button id="botao-fechar" class="botao-pequeno">Fechá-lo</button></a>
+							<a href="/meu-menu"><button id="botao-voltar" class="botao-pequeno">Voltar</button></a>
+						</div>
+					</div>  
+				</div>
+			</section>
+
+			<section id="coluna-principal" >
+				<div id="conteudo__coluna-principal" class="recordar-passado">
+					<div id="barra-rotacionada_escrever-presente"></div>
+					<div id="folha">
+						<div class="titulo-folha">
+							<p> Oceano </p>
+						</div>
+						<div class="corpo-folha">
+							<p>Eu respeito a pessoa que sabe o que deseja. A maior parte de todos os prejuízos no mundo decorre do fato de que a maioria não compreende suficientemente seus próprios objetivos. Eles se comprometeram a construir uma torre e não gastarão mais trabalho na base do que seria necessário para erguer uma cabana. (Goethe.)<br><br>
+							Eu respeito a pessoa que sabe o que deseja. A maior parte de todos os prejuízos no mundo decorre do fato de que a maioria não compreende suficientemente seus próprios objetivos. Eles se comprometeram a construir uma torre e não gastarão mais trabalho na base do que seria necessário para erguer uma cabana. (Goethe.)</p>
+						</div>
+					</div>
+
+					<div id="box-inferior">
+						<p id="numero-folha" class="faixa-texto">Folha 1</p>
+						<!-- <button id="botao-adicionar-folha">Adicioná-la ao meu diário!
+						</button> -->
+					</div>
+				</div>
+				
+			</section>
+		</main>
+		
+	
+	
+
+		{{> footer}}
+	
+		
+		
+		
+
+		<script type="text/javascript" src="javascripts/funcoes-momento-presente.js"></script>
+		<script type="text/javascript" src="javascripts/foco-folha.js"></script>
+	</body>
+</html>
+

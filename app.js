@@ -1,54 +1,49 @@
-function mostrarRelogio() {
-	
-	var presente = new Date;
-	
-	var horaMinuto = presente.toString().substr(16, 5);
-	var segundos = presente.toString().substr(22, 2);
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var hbs = require('hbs');
 
-	document.getElementById('hora-minuto').innerHTML = horaMinuto + ':';
-	document.getElementById('segundos').innerHTML = segundos;
-}
+var index = require('./routes/index');
+var users = require('./routes/users');
 
+var app = express();
 
-function mostrarData(){
-	
-	var presente = new Date;
-
-	var mes = presente.getMonth();
-	var mesPresente = (mes + 1);
-
-	var dia = presente.toString().substr(8, 2);
-	var ano = presente.toString().substr(13, 2);
-	
-	document.getElementById('dia-mes').innerHTML = dia + '/' + mesPresente;
-	document.getElementById('ano').innerHTML = ano;
-}
-
-function diaOuNoite(){
-	
-	var presente = new Date;
-
-	var hora = presente.getHours();
-
-	if ((hora >= 6) && (hora < 12)) { 
-		document.getElementById('saudacao-msg').innerHTML = 'Bom dia!';
-	} else if ((hora >= 12) && (hora < 18)) { 
-		document.getElementById('saudacao-msg').innerHTML = 'Boa tarde!';
-	} else {
-		document.getElementById('saudacao-msg').innerHTML = 'Boa noite!';
-		document.getElementById('icone-tempo').src = 'img/lua.png';
-	}
-}
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
+hbs.registerPartials(__dirname + '/views/partials');
 
 
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-mostrarRelogio();
-setInterval(mostrarRelogio, 1000);
-mostrarData();
-diaOuNoite();
+app.use('/', index);
+app.use('/users', users);
 
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
 
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
 
-
-
+module.exports = app;

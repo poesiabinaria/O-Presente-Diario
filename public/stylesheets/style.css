@@ -133,7 +133,7 @@ input:focus { box-shadow: 0 1px 15px 0 rgba(0, 164, 211, .5); }
 /* #################### Conteúdo*/
 
 body{
-	background-image: url("img/background-abaixo-1024px.jpg");
+	background-image: url("../img/background-abaixo-1024px.jpg");
 	background-size:cover;
 	height: 1100px;
 	margin: 0;
@@ -326,13 +326,11 @@ main{
 #box-cadastro{ 
 	border-right: 2px solid white; 
 	padding: 0 70px 0 70px;
-
 }
 
 
+
 #elementos-login input, 
-
-
 #elementos-cadastro input{ margin-bottom: 10px; }
 
 
@@ -444,7 +442,7 @@ main{
 
 
 .paginas-escrever-recordar{
-	background-image: url("img/background-pag-escrever-recordar.jpg");
+	background-image: url("../img/background-pag-escrever-recordar.jpg");
 	background-size: cover;
 	background-position: center;
 }
@@ -599,7 +597,7 @@ main{
 
 .ver-folhas{
 	margin: 70px auto auto auto;
-	width: 430px;
+	width: 460px;
 	position: relative;	
 }
 
@@ -657,7 +655,7 @@ main{
 	border: 1px solid white;
 	width: 140px;
 	position: absolute;
-	left: 313px;
+	left: 343px;
 	top: 417px;
 	transform: rotate(130deg);
 }
