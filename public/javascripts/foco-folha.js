@@ -13,7 +13,7 @@ function focarFolha(){
 	colunaImperativa.className = "coluna-imperativa-escondida";
 	colunaPrincipal.className = 'margem-diminuida';
 	footer.className = 'margem-diminuida';
-	iconeSeta.src = 'img/seta-direita.png';
+	iconeSeta.src = '/img/seta-direita.png';
 }
 
 
@@ -24,7 +24,7 @@ function retornarPadraoPagina(){
 	colunaImperativa.className = '';
 	colunaPrincipal.className = '';
 	footer.className = '';
-	iconeSeta.src = 'img/seta-esquerda.png';
+	iconeSeta.src = '/img/seta-esquerda.png';
 }
 
 
