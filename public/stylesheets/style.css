@@ -35,6 +35,17 @@ button:hover{ background-color: #32b6db; }
 
 .botao-grande{ padding: 14px 18px; }
 
+.notificacao-usuario{
+	font-size: 12px;
+	font-style: italic;
+	background-color: rgb(35, 44, 49);
+	display: inline-block;
+	border-left: 1px solid #DA1653;
+	padding: 8px 15px;
+}
+
+
+
 #botao-fechar {
 	font-size: 9px;
 	margin: 10px 0 5px 0;
@@ -432,11 +443,6 @@ main{
 .escrever-presente, .recordar-passado {
 	margin: 0 auto;
 	width: 560px;
-
-	/*border-left: 2px solid white;	
-	border-right: 2px solid white;
-	padding-left: 15px;
-	padding-right: 15px;*/
 	position: relative;
 }
 

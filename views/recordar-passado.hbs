@@ -42,16 +42,16 @@
 					<div id="barra-rotacionada_escrever-presente"></div>
 					<div id="folha">
 						<div class="titulo-folha">
-							<p> Oceano </p>
+							<p> {{folhaSelecionada.tituloFolha}} </p>
 						</div>
 						<div class="corpo-folha">
-							<p>Eu respeito a pessoa que sabe o que deseja. A maior parte de todos os prejuízos no mundo decorre do fato de que a maioria não compreende suficientemente seus próprios objetivos. Eles se comprometeram a construir uma torre e não gastarão mais trabalho na base do que seria necessário para erguer uma cabana. (Goethe.)<br><br>
-							Eu respeito a pessoa que sabe o que deseja. A maior parte de todos os prejuízos no mundo decorre do fato de que a maioria não compreende suficientemente seus próprios objetivos. Eles se comprometeram a construir uma torre e não gastarão mais trabalho na base do que seria necessário para erguer uma cabana. (Goethe.)</p>
+							<p> {{folhaSelecionada.corpoFolha}} </p>
 						</div>
 					</div>
 
 					<div id="box-inferior">
-						<p id="numero-folha" class="faixa-texto">Folha 1</p>
+						<p id="numero-folha" class="faixa-texto"> Folha {{numeroFolha}}</p>
+						<span class="momento-escrita faixa-texto"> {{folhaSelecionada.dataEscrita}} </span>
 						<!-- <button id="botao-adicionar-folha">Adicioná-la ao meu diário!
 						</button> -->
 					</div>

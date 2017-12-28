@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 
 <html>
-	
+
 	{{> head}}
-	
+
 	<body>
+
 		<section id="coluna-imperativa">
 			<div id="coluna-imperativa__conteudo">
 				
@@ -18,8 +19,7 @@
 
 		<!-- Coluna Principal -->
 
-		<main>
-
+		<main>	
 			<section id="cabecalho">
 				<div id="conteudo__cabecalho">
 					<div class="box-superior">
@@ -38,9 +38,17 @@
 							<p> Já tem acesso? <p>
 						</div>
 						<div id="elementos-login">
-							<form action="" method="post">
-								<input type="email" name="email" class="input" placeholder="Digite o seu e-mail" autofocus required="true" spellcheck="false">
-								<input type="password" name="senha" class="input" placeholder="Digite a sua senha" maxlength="12" required="true">
+							<form action="/" method="post">
+								<input type="email" name="email" placeholder="Digite o seu e-mail" autofocus required="true" spellcheck="false">
+								<input type="password" name="senha" placeholder="Digite a sua senha" maxlength="12" required="true">
+
+								{{#if usuarioNaoEncontrado}}
+								  <div class="notificacao-usuario">
+									  	{{msgPrincipalUsuario}}<br>
+									  	{{msgSecundariaUsuario}}
+								  </div>
+								{{/if}}
+								
 								<div id="botao-entrar">
 									<button type="submit"> Abrir Diário </button>
 								</div>
@@ -58,8 +66,14 @@
 							<form action="/juntarse" method="post">
 								<input type="text" name="nome" placeholder="Como se chama?" maxlength="8" required="true">
 								<input type="email" name="email" placeholder="Qual o seu e-mail?" required="true">
-								<input type="password" name="senha" placeholder="Digite uma senha" maxlength="12" required="true">
-								<input type="password" name="confirmarSenhaCadastro" placeholder="Digite a senha novamente" maxlength="12" required="true"> 
+								<input type="password" id="senhaUsuario" name="senha" placeholder="Digite uma senha" maxlength="12" required="true">
+								<input type="password" id="confirmacaoSenhaUsuario" name="confirmarSenhaCadastro" placeholder="Digite a senha novamente" maxlength="12" required="true"> 
+								{{#if usuarioExistente}}
+								  <div class="notificacao-usuario">
+									  	{{msgPrincipalUsuario}}<br>
+									  	{{msgSecundariaUsuario}}
+								  </div>
+								{{/if}}
 								<div id="botao-juntarse">
 									<button type="submit" value="Submit"> Juntar-se </button>
 								</div>
@@ -76,10 +90,20 @@
 		{{> footer}}
 	
 		
-		
-		
 
 		<script type="text/javascript" src="javascripts/funcoes-momento-presente.js"></script>
+		
+		
+		<script>
+			
+			// if ('{{mensagemStatus}}' == 'usuario-nao-encontrado') {
+			// 	alert('Usuário não encontrado :( Tente novamente.')
+			// } else if ('{{mensagemStatus}}' == 'conta-criada') {
+			// 	alert('Conta criada com sucesso! Faça login para acessá-la.')
+			// }
+
+		</script>
+		
 	</body>
 </html>
 

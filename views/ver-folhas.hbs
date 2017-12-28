@@ -38,21 +38,23 @@
 			<section id="coluna-principal" class="ver-folhas">
 				<div id="conteudo__coluna-principal">
 					<div class="mensagens-interativas">
-						<p id="msg-principal" class="faixa-texto"> Há {{listaFolhas.length}} folha(s) em seu diário, Gabriel </p>
-						<p id="msg-secundaria" class="faixa-texto"> Escolha uma para relembrar: </p>
+						<p id="msg-principal" class="faixa-texto"> Há {{listaFolhas.length}} folha(s) em seu diário, {{nomeUsuario}} </p>
+						<p id="msg-secundaria" class="faixa-texto"> Escolha para relembrar: </p>
 					</div>
 
 					<div id="box-ver-folhas" class="box-central">
 						<div id="lista-folhas">
 							{{#mostrarFolhas listaFolhas}}
 								<div class="barra-vertical">
-									<div id="resumo-folha">
-										<p class="titulo-folha"> {{tituloFolha}} </p>
-										<div class="informacoes-folha">
-											<span class="numero-folha faixa-texto"> {{numeroFolha}} </span>
-											<span class="momento-escrita faixa-texto"> {{dataEscrita}} </span>
+									<a href="exibir-folhas/{{numeroFolha}}">
+										<div id="resumo-folha">
+											<p class="titulo-folha"> {{tituloFolha}} </p>
+											<div class="informacoes-folha">
+												<span class="numero-folha faixa-texto"> Folha {{numeroFolha}} </span>
+												<span class="momento-escrita faixa-texto"> {{dataEscrita}} </span>
+											</div>
 										</div>
-									</div>
+									</a>
 								</div>
 							{{/mostrarFolhas}}
 						</div>

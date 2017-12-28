@@ -1,4 +1,13 @@
 var {Usuario} = require('../models/usuario');
+var hbs = require('hbs');
+
+hbs.registerHelper('if', function(condicao, options) {
+  if(condicao) {
+    return options.fn(this);
+  }
+});
+
+
 
 
 module.exports = {
@@ -10,34 +19,55 @@ module.exports = {
 		    email: req.body.email,
 		    senha: req.body.senha
 		  });
-		  
-		  novoUsuario.save().then((novoUsuario) => {
-		    res.send('Sua conta foi criada com sucesso, ' + novoUsuario.nome);
-		  },
-		    (e) => {
-		      res.status(400).send(e);
-		      console.log('Não foi possível criar um novo usuário.');
+
+		  Usuario.find({email: novoUsuario.email}).
+		  then((resultado) => {
+		  	
+		  	if (resultado[0] != null) { 
+
+		  		res.render('capa', {
+		  			tituloPagina: 'Capa', 
+		  			usuarioExistente: true,
+		  			msgPrincipalUsuario: 'Você já possui um diário, ' + novoUsuario.nome,
+		  			msgSecundariaUsuario: 'Faça login para abri-lo!'
+		  		});
+
+		  	} else {
+
+		  		novoUsuario.save().then((novoUsuario) => {
+		  		  res.render('capa', {
+		  		  	tituloPagina: 'Capa',
+		  		  	mensagemStatus: 'conta-criada'
+		  		  });
+		  		},
+		  		  (e) => {
+		  		    res.status(400).send(e);
+		  		    console.log('Não foi possível criar um novo usuário.');
+		  		});	
+		  	}
 		  });
-		
+
+		  
+		  
+		 
 	},
 
 	loginUsuario_post: (req, res) => {
 
-		// var emailUsuario = 'gabrielmaceddo.dev@gmail.com';
-		// var senhaUsuario = 'gabrisl123';
-
-		
 		var emailUsuario = req.body.email;
 		var senhaUsuario = req.body.senha;
-		
-		// res.send('Resposta do servidor: ' + emailUsuario + senhaUsuario);
 
 		Usuario.find({email: emailUsuario, senha: senhaUsuario}).
 		then((resultado) => {
 			
 			if (resultado[0] == null) { 
-				console.log('Usuário não encontrado.');
-				res.send('Usuário não encontrado.');
+
+				res.render('capa', {
+					tituloPagina: 'Capa', 
+					usuarioNaoEncontrado: true,
+					msgPrincipalUsuario: 'Não encontramos você :(',
+					msgSecundariaUsuario: 'Tente novamente'
+				});
 			};
 
 			var nomeUsuario = resultado[0].nome;
@@ -48,9 +78,6 @@ module.exports = {
 				nomeUsuario: nomeUsuario,
 				idUsuario: idUsuario
 			});
-
-			// res.send('Bem-vindo, ' + nomeUsuario);
-
 		})	
 	},
 };

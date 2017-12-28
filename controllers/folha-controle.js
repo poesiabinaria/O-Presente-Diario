@@ -10,13 +10,13 @@ module.exports = {
 		console.log("Entrou em VER FOLHAS");
 		
 		var idUsuario = req.params.idUsuario;
-		var nomeUsuario = req.params.nomeUsuario;
 
 		console.log("IDD: ", idUsuario);
 
 		Usuario.findOne({_id: idUsuario}).
 		then((resultado) => {
 
+			var nomeUsuario = resultado.nome;
 			var listaFolhas = resultado.folhas;
 			
 			hbs.registerHelper('mostrarFolhas', function(items, options) {
@@ -25,7 +25,7 @@ module.exports = {
 			  for(var i=0, l=items.length; i<l; i++) {
 			
 			  	var folhaIndividual = resultado.folhas[i];
-				folhaIndividual.numeroFolha = 'Folha ' + (listaFolhas.indexOf(items[i]) + 1); // Adiciona a chave "numeroFolha" a cada folha da lista.
+				folhaIndividual.numeroFolha = (listaFolhas.indexOf(items[i]) + 1); // Adiciona a chave "numeroFolha" a cada folha da lista.
 			  	
 			    codigoHTML = codigoHTML + options.fn(items[i]);
 			  }
@@ -40,14 +40,47 @@ module.exports = {
 			listaFolhas: listaFolhas,
 			});
 		});
-
-		
 	},
 
 	mostrarFolha_get: (req, res) => {
 		console.log("Entrou em MOSTRAR FOLHA");
 
+		var idUsuario = req.params.idUsuario;
+		var numeroFolha = req.params.numeroFolha;
 
+		Usuario.findOne({_id: idUsuario}).
+		then((resultado) => {
+
+			var nomeUsuario = resultado.nome;
+			var folhaSelecionada = resultado.folhas[numeroFolha - 1];
+			
+			res.render('recordar-passado', {
+				tituloPagina: 'Recordar Passado',
+				idUsuario: idUsuario,
+				nomeUsuario: nomeUsuario,
+				folhaSelecionada: folhaSelecionada,
+				numeroFolha: numeroFolha
+			})
+		})
+	},
+
+	novaFolha_get: (req, res) => {
+		console.log("Entrou em MOSTRAR FOLHA GET");
+
+		var idUsuario = req.params.idUsuario;
+
+		Usuario.findOne({_id: idUsuario}).
+		then((resultado) => {
+
+			var nomeUsuario = resultado.nome;
+			
+			res.render('escrever-presente', { 
+				tituloPagina: 'Escrever Presente',
+				momento: 'presente',
+				nomeUsuario: nomeUsuario,
+				idUsuario: idUsuario
+			});
+		})
 	},
 
 	novaFolha_post: (req, res) => {
@@ -68,8 +101,11 @@ module.exports = {
 				}
 			},
 		})
-		.then((result) => {
-			res.send(result);
+		.then((resultado) => {
+
+			var nomeUsuario = resultado.nome;
+
+			res.redirect('/diario/' + idUsuario + '/exibir-folhas/');
 		});
 	},
 };
