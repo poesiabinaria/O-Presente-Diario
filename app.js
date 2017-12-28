@@ -24,11 +24,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use('/static', express.static(__dirname + '/public'));
 
-// app.use('/img',express.static(path.join(__dirname, 'public/img')));
-// app.use('/js',express.static(path.join(__dirname, 'public/javascripts')));
-// app.use('/css',express.static(path.join(__dirname, 'public/stylesheets')));
 
 app.use('/', index);
 

@@ -1,13 +1,12 @@
 var {Usuario} = require('../models/usuario');
 var hbs = require('hbs');
 
+
 hbs.registerHelper('if', function(condicao, options) {
   if(condicao) {
     return options.fn(this);
   }
 });
-
-
 
 
 module.exports = {
@@ -28,8 +27,8 @@ module.exports = {
 		  		res.render('capa', {
 		  			tituloPagina: 'Capa', 
 		  			usuarioExistente: true,
-		  			msgPrincipalUsuario: 'Você já possui um diário, ' + novoUsuario.nome,
-		  			msgSecundariaUsuario: 'Faça login para abri-lo!'
+		  			msgPrincipalUsuario: `Você já possui um diário,  ${novoUsuario.nome}!` ,
+		  			msgSecundariaUsuario: 'Faça login para abri-lo'
 		  		});
 
 		  	} else {
@@ -46,10 +45,6 @@ module.exports = {
 		  		});	
 		  	}
 		  });
-
-		  
-		  
-		 
 	},
 
 	loginUsuario_post: (req, res) => {

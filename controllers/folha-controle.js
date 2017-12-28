@@ -56,6 +56,8 @@ module.exports = {
 			
 			res.render('recordar-passado', {
 				tituloPagina: 'Recordar Passado',
+				acao: 'recordar',
+				momento: 'passado',
 				idUsuario: idUsuario,
 				nomeUsuario: nomeUsuario,
 				folhaSelecionada: folhaSelecionada,
@@ -76,6 +78,7 @@ module.exports = {
 			
 			res.render('escrever-presente', { 
 				tituloPagina: 'Escrever Presente',
+				acao: 'escrever',
 				momento: 'presente',
 				nomeUsuario: nomeUsuario,
 				idUsuario: idUsuario
