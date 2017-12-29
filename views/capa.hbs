@@ -56,7 +56,14 @@
 						</div>
 					</div>
 
-					<div id="barra-rotacionada_homepage"></div>
+
+					{{#if usuarioExistente}}
+						<div class="barra-rotacionada_homepage" 
+						id="ajuste-barra"></div>
+						{{else}}
+						<div class="barra-rotacionada_homepage"></div>
+					{{/if}}
+
 
 					<div id="box-cadastro">
 						<div class="titulo-boxes">

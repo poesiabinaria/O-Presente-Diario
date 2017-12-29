@@ -108,7 +108,7 @@ module.exports = {
 
 			var nomeUsuario = resultado.nome;
 
-			res.redirect('/diario/' + idUsuario + '/exibir-folhas/');
+			res.redirect('/diario/' + idUsuario + '/exibir-folhas');
 		});
 	},
 };

@@ -1,16 +1,26 @@
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
+var hbs = require('hbs');
 
 var {mongoose} = require('../db/mongoose'); 
 
 var usuario_controle = require('../controllers/usuario-controle');
 var folha_controle = require('../controllers/folha-controle');
 
+hbs.registerHelper('if', function(condicao, options) {
+  if(condicao) {
+    return options.fn(this);
+  } else{
+  	return options.inverse(this);
+  }
+});
 
 router.get('/', (req, res) => {
   res.render('capa', { 
-  	tituloPagina: 'Capa'});
+  	tituloPagina: 'Capa',
+  	usuarioExistente: false
+  });
 });
 
 router.get('/saiba-mais', (req, res) => {

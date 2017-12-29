@@ -348,7 +348,7 @@ main{
 #botao-entrar, #botao-juntarse {margin-top: 24px; }
 
 
-#barra-rotacionada_homepage{
+.barra-rotacionada_homepage{
 	border: 1px solid white;
 	width: 398px;
 	position: absolute;
@@ -356,6 +356,10 @@ main{
 	bottom: 334px;
 	transform: rotate(19deg);
 }
+
+
+#ajuste-barra { bottom: 388px; }
+
 
 
 
@@ -604,7 +608,18 @@ main{
 .ver-folhas{
 	margin: 70px auto auto auto;
 	width: 460px;
-	position: relative;	
+	position: relative;
+}
+
+
+#barra-rotacionada_ver-folha{
+	border: 1px solid white;
+	width: 140px;
+	position: absolute;
+	left: 343px;
+	bottom: 5px;
+	
+	transform: rotate(130deg);
 }
 
 #box-ver-folhas{
@@ -657,14 +672,7 @@ main{
 }
 
 
-#barra-rotacionada_ver-folha{
-	border: 1px solid white;
-	width: 140px;
-	position: absolute;
-	left: 343px;
-	top: 417px;
-	transform: rotate(130deg);
-}
+
 
 
 #botao-mais {
