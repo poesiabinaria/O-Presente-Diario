@@ -5,6 +5,8 @@ var hbs = require('hbs');
 hbs.registerHelper('if', function(condicao, options) {
   if(condicao) {
     return options.fn(this);
+  } else{
+  	return options.inverse(this);
   }
 });
 
@@ -71,7 +73,8 @@ module.exports = {
 			res.render('meu-menu', {
 				tituloPagina: 'Meu Menu', 
 				nomeUsuario: nomeUsuario,
-				idUsuario: idUsuario
+				idUsuario: idUsuario,
+
 			});
 		})	
 	},

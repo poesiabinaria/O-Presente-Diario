@@ -16,12 +16,12 @@ module.exports = {
 
 		var diaSemana = todosDiasSemana[presente.getDay()];
 
-		var dia = presente.getDate();
-		var mes = presente.getMonth();
+		var dia = ('0' + presente.getDate()).slice(-2);
+		var mes = ('0' + (presente.getMonth() + 1)).slice(-2);
 		var ano = presente.getFullYear();
 
-		var hora = presente.getHours();
-		var minuto = presente.getMinutes();
+		var hora = ('0' + presente.getHours()).slice(-2);
+		var minuto = ('0' + presente.getMinutes()).slice(-2);
 
 		return `${diaSemana}, ${dia}/${mes}/${ano} às ${hora}:${minuto}`
 	}

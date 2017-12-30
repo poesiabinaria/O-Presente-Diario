@@ -40,8 +40,9 @@ button:hover{ background-color: #32b6db; }
 	font-style: italic;
 	background-color: rgb(35, 44, 49);
 	display: inline-block;
-	border-left: 1px solid #DA1653;
+	border-left: 2px solid #DA1653;
 	padding: 8px 15px;
+	margin-top: 10px;
 }
 
 
@@ -291,7 +292,7 @@ h1{
 /*Coluna Principal*/
 
 main{
-	height: 94.6%;
+	height: 1042px;
 	margin-left: 215px; 
 	background-color: rgba(255, 255, 255, 0);
 	transition: .35s ease-out;
@@ -353,12 +354,12 @@ main{
 	width: 398px;
 	position: absolute;
 	left: -10px;
-	bottom: 334px;
+	bottom: 294px;
 	transform: rotate(19deg);
 }
 
 
-#ajuste-barra { bottom: 388px; }
+#ajuste-barra { bottom: 358px; }
 
 
 
@@ -368,6 +369,7 @@ main{
 /* #################### PÁGINA MEU-MENU*/
 
 .meu-menu{ 
+	text-align: center;
 	position: relative; 
 	width: 350px;
 }
@@ -407,13 +409,11 @@ main{
 	display: inline-table;
 	color: white;
 	margin-top: 8px;	
-	margin-bottom: 0;
 }
 
 
 #sub-presente{
-	margin-left: 66px;
-	margin-right: 43px;
+	margin-right: 42px;
 }
 
 
@@ -435,10 +435,10 @@ main{
 .paginas-escrever-recordar{ height: 1300px; }
 
 
-.paginas-escrever-recordar main{ height: 95.4%; }
+.paginas-escrever-recordar main{ height: 1242px; }
 
 
-.paginas-escrever-recordar #coluna-imperativa { height: 1292px; }
+.paginas-escrever-recordar #coluna-imperativa { height: 1290px; }
 
 
 .paginas-escrever-recordar #coluna-imperativa__conteudo { margin-top: 18px; }
@@ -594,6 +594,9 @@ main{
 #numero-folha{ margin: 0 0 15px 125px; }
 
 
+#numero-folha-r-p{
+	margin-bottom: 15px;: 
+}
 
 
 
@@ -674,12 +677,12 @@ main{
 
 
 
-
 #botao-mais {
 	margin-top: 40px; 
 	padding: 3px 12px;
 	background-color: unset;
 	border: 1px solid white;
+	cursor: not-allowed;
 }
 
 

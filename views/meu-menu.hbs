@@ -50,6 +50,13 @@
 							<p id="sub-passado"> o passado. </p>
 						</div>
 
+						{{#if diarioSemFolha}}
+							  <div class="notificacao-usuario">
+							  	{{msgPrincipalUsuario}}<br>
+							  	{{msgSecundariaUsuario}}
+							  </div>
+						{{/if}}
+
 						<div id="barra-rotacionada_meu-menu"></div>
 					</div>
 				</div>
@@ -60,7 +67,7 @@
 		{{> footer}}
 		
 
-		<script type="text/javascript" src="javascripts/funcoes-momento-presente.js"></script>
+		<script type="text/javascript" src="/javascripts/funcoes-momento-presente.js"></script>
 	</body>
 </html>
 

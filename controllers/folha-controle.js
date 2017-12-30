@@ -3,6 +3,16 @@ var hbs = require('hbs');
 var {Usuario} = require('../models/usuario.js');
 var funcoesGerais = require('../funcoes-gerais');
 
+hbs.registerHelper('if', function(condicao, options) {
+  if(condicao) {
+    return options.fn(this);
+  } else{
+  	return options.inverse(this);
+  }
+});
+
+
+
 
 module.exports = {
 	
@@ -11,34 +21,53 @@ module.exports = {
 		
 		var idUsuario = req.params.idUsuario;
 
-		console.log("IDD: ", idUsuario);
-
 		Usuario.findOne({_id: idUsuario}).
 		then((resultado) => {
 
 			var nomeUsuario = resultado.nome;
 			var listaFolhas = resultado.folhas;
-			
-			hbs.registerHelper('mostrarFolhas', function(items, options) {
-			  var codigoHTML = '';
-			  
-			  for(var i=0, l=items.length; i<l; i++) {
-			
-			  	var folhaIndividual = resultado.folhas[i];
-				folhaIndividual.numeroFolha = (listaFolhas.indexOf(items[i]) + 1); // Adiciona a chave "numeroFolha" a cada folha da lista.
-			  	
-			    codigoHTML = codigoHTML + options.fn(items[i]);
-			  }
-			  
-			  return codigoHTML;
-			})
 
-			res.render('ver-folhas', { 
-			tituloPagina: 'Ver Folhas',
-			idUsuario: idUsuario,
-			nomeUsuario: nomeUsuario,
-			listaFolhas: listaFolhas,
-			});
+			if (listaFolhas[0] == null){
+
+				var diarioSemFolha = true;
+
+				res.render('meu-menu', {
+					tituloPagina: 'Meu Menu', 
+					nomeUsuario: nomeUsuario,
+					idUsuario: idUsuario,
+					diarioSemFolha: diarioSemFolha,
+					msgPrincipalUsuario: 'Você ainda não escreveu em seu diário',
+					msgSecundariaUsuario: 'Para começar, escolha Escrever!'
+				});
+
+			} else {
+
+				hbs.registerHelper('mostrarFolhas', function(items, options) {
+				  var codigoHTML = '';
+				  
+				  for(var i=0, l=items.length; i<l; i++) {
+				
+				  	var folhaIndividual = resultado.folhas[i];
+					folhaIndividual.numeroFolha = (listaFolhas.indexOf(items[i]) + 1); // Adiciona a chave "numeroFolha" a cada folha da lista.
+				  	
+				    codigoHTML = codigoHTML + options.fn(items[i]);
+				  }
+				  
+				  return codigoHTML;
+				})
+
+				res.render('ver-folhas', { 
+				tituloPagina: 'Ver Folhas',
+				idUsuario: idUsuario,
+				nomeUsuario: nomeUsuario,
+				diarioSemFolha: diarioSemFolha,
+				listaFolhas: listaFolhas
+				});
+			}
+
+			
+			
+			
 		});
 	},
 
@@ -53,7 +82,7 @@ module.exports = {
 
 			var nomeUsuario = resultado.nome;
 			var folhaSelecionada = resultado.folhas[numeroFolha - 1];
-			
+
 			res.render('recordar-passado', {
 				tituloPagina: 'Recordar Passado',
 				acao: 'recordar',

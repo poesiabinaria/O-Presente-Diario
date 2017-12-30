@@ -74,7 +74,7 @@
 								<input type="text" name="nome" placeholder="Como se chama?" maxlength="8" required="true">
 								<input type="email" name="email" placeholder="Qual o seu e-mail?" required="true">
 								<input type="password" id="senhaUsuario" name="senha" placeholder="Digite uma senha" maxlength="12" required="true">
-								<input type="password" id="confirmacaoSenhaUsuario" name="confirmarSenhaCadastro" placeholder="Digite a senha novamente" maxlength="12" required="true"> 
+								<!-- <input type="password" id="confirmacaoSenhaUsuario" name="confirmarSenhaCadastro" placeholder="Digite a senha novamente" maxlength="12" required="true"> --> 
 								{{#if usuarioExistente}}
 								  <div class="notificacao-usuario">
 									  	{{msgPrincipalUsuario}}<br>
@@ -99,17 +99,6 @@
 		
 
 		<script type="text/javascript" src="javascripts/funcoes-momento-presente.js"></script>
-		
-		
-		<script>
-			
-			// if ('{{mensagemStatus}}' == 'usuario-nao-encontrado') {
-			// 	alert('Usuário não encontrado :( Tente novamente.')
-			// } else if ('{{mensagemStatus}}' == 'conta-criada') {
-			// 	alert('Conta criada com sucesso! Faça login para acessá-la.')
-			// }
-
-		</script>
 		
 	</body>
 </html>

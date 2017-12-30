@@ -1,12 +1,13 @@
 function mostrarRelogio() {
 	
 	var presente = new Date;
-	
-	var horaMinuto = presente.toString().substr(16, 5);
-	var segundos = presente.toString().substr(22, 2);
 
-	document.getElementById('hora-minuto').innerHTML = horaMinuto + ':';
-	document.getElementById('segundos').innerHTML = segundos;
+	var hora = ('0' + presente.getHours()).slice(-2);
+	var minuto = ('0' + presente.getMinutes()).slice(-2);
+	var segundo = ('0' + presente.getSeconds()).slice(-2);
+	
+	document.getElementById('hora-minuto').innerHTML = `${hora}:${minuto}:`;
+	document.getElementById('segundos').innerHTML = segundo;
 }
 
 
@@ -14,13 +15,11 @@ function mostrarData(){
 	
 	var presente = new Date;
 
-	var mes = presente.getMonth();
-	var mesPresente = (mes + 1);
-
-	var dia = presente.toString().substr(8, 2);
-	var ano = presente.toString().substr(13, 2);
+	var dia = ('0' + presente.getDate()).slice(-2);
+	var mes = ('0' + (presente.getMonth() + 1)).slice(-2);
+	var ano = (presente.getFullYear()).toString().slice(-2);
 	
-	document.getElementById('dia-mes').innerHTML = dia + '/' + mesPresente;
+	document.getElementById('dia-mes').innerHTML = dia + '/' + mes;
 	document.getElementById('ano').innerHTML = ano;
 }
 
