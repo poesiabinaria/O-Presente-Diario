@@ -1,6 +1,13 @@
 var mongoose = require('mongoose');
 
 mongoose.Promisse = global.Promisse;
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/OPresenteDiario', { useMongoClient: true });
+// mongoose.connect(process.env.MONGODB_URI || '', { useMongoClient: true });
+
+let db = {
+  localhost: 'mongodb://localhost:27017/OPresenteDiario',
+  mlab: 'mongodb://Gabriel:$opresentediariodb$@ds237947.mlab.com:37947/o-presente-diario'
+};
+
+mongoose.connect( db.localhost || db.mlab);
 
 module.exports = {mongoose};
