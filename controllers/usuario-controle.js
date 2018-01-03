@@ -38,7 +38,9 @@ module.exports = {
 		  		novoUsuario.save().then((novoUsuario) => {
 		  		  res.render('capa', {
 		  		  	tituloPagina: 'Capa',
-		  		  	mensagemStatus: 'conta-criada'
+		  		  	contaCriada: true,
+		  		  	msgPrincipalUsuario: 'Diário criado com sucesso!',
+		  		  	msgSecundariaUsuario: 'Faça login para abri-lo'
 		  		  });
 		  		},
 		  		  (e) => {

@@ -42,6 +42,13 @@
 								<input type="email" name="email" placeholder="Digite o seu e-mail" autofocus required="true" spellcheck="false">
 								<input type="password" name="senha" placeholder="Digite a sua senha" maxlength="12" required="true">
 
+								{{#if contaCriada}}
+								  <div class="notificacao-usuario">
+									  	{{msgPrincipalUsuario}}<br>
+									  	{{msgSecundariaUsuario}}
+								  </div>
+								{{/if}}
+
 								{{#if usuarioNaoEncontrado}}
 								  <div class="notificacao-usuario">
 									  	{{msgPrincipalUsuario}}<br>
