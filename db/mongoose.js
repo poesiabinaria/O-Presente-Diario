@@ -8,6 +8,6 @@ let db = {
   mlab: 'mongodb://Gabriel:$opresentediariodb$@ds237947.mlab.com:37947/o-presente-diario'
 };
 
-mongoose.connect( db.localhost || db.mlab);
+mongoose.connect( (db.localhost || db.mlab), { useMongoClient: true });
 
 module.exports = {mongoose};
