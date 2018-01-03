@@ -36,8 +36,8 @@ module.exports = {
 					nomeUsuario: nomeUsuario,
 					idUsuario: idUsuario,
 					diarioSemFolha: diarioSemFolha,
-					msgPrincipalUsuario: 'Você ainda não escreveu em seu diário',
-					msgSecundariaUsuario: 'Para começar, escolha Escrever!'
+					msgPrincipalUsuario: 'Ainda não há folhas em seu diário para recordar',
+					msgSecundariaUsuario: 'Para criar uma, escolha Escrever!'
 				});
 
 			} else {
